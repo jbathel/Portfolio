@@ -1,0 +1,140 @@
+////////////////////////////////
+// HERO
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary, 0.95),
+      rgba($color-secondary, 0.75)
+    ),
+    url("../img/background.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  z-index: -1;
+
+  &__logo {
+    height: 30rem;
+    width: 30rem;
+    opacity: 0.75;
+  }
+
+  & h1 {
+    font-size: 4rem;
+    letter-spacing: 1px;
+    color: $color-text-light;
+  }
+
+  & p {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+}
+
+////////////////////////////////
+// NAVIGATION
+.nav {
+  color: $color-text-light;
+  font-size: 1.6rem;
+
+  width: 100%;
+  padding: 1rem 20rem;
+  background-color: $color-primary;
+  background-position: bottom center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & a {
+    color: $color-text-light;
+    padding: 0.1rem 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.nav.active {
+  background-color: $color-text-light;
+  border-bottom: 1px solid $color-primary-light;
+  box-shadow: $shadow-dark;
+  transition: all 0.3s ease-in-out;
+
+  & a {
+    color: $color-text-dark;
+  }
+
+  & .container {
+    padding: 0.2rem;
+  }
+}
+
+.nav a.current,
+.nav a:hover {
+  color: $color-secondary;
+  font-weight: 700;
+}
+
+.social {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+
+  & > * {
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    padding: 0 1rem;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  & > *:hover {
+    color: $color-primary-dark;
+  }
+}
+
+////////////////////////////////
+// CONTENT
+.content {
+  padding-top: 2rem;
+  color: $color-primary-dark;
+
+  &__title {
+    text-shadow: 0 0 5px rgba($color-secondary, 0.3);
+    font-size: 4rem;
+    margin: 2rem 0;
+    line-height: 1;
+  }
+
+  & p {
+    line-height: 3rem;
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+}
